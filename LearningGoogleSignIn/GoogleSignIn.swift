@@ -10,7 +10,7 @@ import SwiftUI
 //114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7.apps.googleusercontent.com
 import GoogleSignIn
 
-struct ContentView: View {
+struct GoogleSignIn: View {
     @State var userName = ""
     @State var email = ""
     @State var imageUrl = ""
@@ -18,6 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button {
+                print("Sign out clicked")
                 GIDSignIn.sharedInstance.signOut()
                 
                 //put user to nil
@@ -50,6 +51,7 @@ struct ContentView: View {
                 userName = result.profile?.name ?? "no name"
                 email = result.profile?.email ?? "no email"
                 imageUrl = result.profile?.imageURL(withDimension: 200)?.absoluteString ?? "no imageUrl"
+                
             }catch{
                 print(error.localizedDescription)
             }
@@ -62,9 +64,7 @@ struct ContentView: View {
             userName = result.user.profile?.name ?? "no name"
             email = result.user.profile?.email ?? "no email"
             imageUrl = result.user.profile?.imageURL(withDimension: 200)?.absoluteString ?? "no imageUrl"
-            
         }
-        
     }
 }
 func getRootViewController() -> UIViewController? {
@@ -89,5 +89,5 @@ private func getVisibleViewController(from vc: UIViewController) -> UIViewContro
 }
 
 #Preview {
-    ContentView()
+    GoogleSignIn()
 }

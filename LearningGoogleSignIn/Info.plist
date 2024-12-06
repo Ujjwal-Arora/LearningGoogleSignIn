@@ -2,16 +2,59 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <!-- Google Configuration -->
     <key>GIDClientID</key>
     <string>114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7.apps.googleusercontent.com</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7</string>
-			</array>
-		</dict>
-	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <!-- Google URL Scheme -->
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7</string>
+            </array>
+        </dict>
+        <!-- Facebook URL Scheme -->
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb564404916447540</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Facebook Configuration -->
+    <key>FacebookAppID</key>
+    <string>564404916447540</string>
+    <key>FacebookClientToken</key>
+    <string>ddee24463a751602cc81b64fe23c6e0f</string>
+    <key>FacebookDisplayName</key>
+    <string>LearningLogIn</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string> <!-- Required for Facebook Login -->
+        <string>fbshareextension</string>
+    </array>
 </dict>
 </plist>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">-->
+<!--<plist version="1.0">-->
+<!--<dict>-->
+<!--    <key>GIDClientID</key>-->
+<!--    <string>114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7.apps.googleusercontent.com</string>-->
+<!--	<key>CFBundleURLTypes</key>-->
+<!--	<array>-->
+<!--		<dict>-->
+<!--			<key>CFBundleURLSchemes</key>-->
+<!--			<array>-->
+<!--				<string>com.googleusercontent.apps.114298827803-cvu4oi63r5hi9e4ib749ohhfa2pdt0r7</string>-->
+<!--			</array>-->
+<!--		</dict>-->
+<!--	</array>-->
+<!--</dict>-->
+<!--</plist>-->

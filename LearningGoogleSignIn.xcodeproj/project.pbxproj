@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A8A22E692D01D76500C72454 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A8A22E682D01D76500C72454 /* GoogleSignIn */; };
 		A8A22E6B2D01D76500C72454 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8A22E6A2D01D76500C72454 /* GoogleSignInSwift */; };
+		A8CC4A282D02D788005BED6E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A8CC4A272D02D788005BED6E /* FacebookCore */; };
+		A8CC4A2A2D02D788005BED6E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A8CC4A292D02D788005BED6E /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CC4A2A2D02D788005BED6E /* FacebookLogin in Frameworks */,
 				A8A22E692D01D76500C72454 /* GoogleSignIn in Frameworks */,
+				A8CC4A282D02D788005BED6E /* FacebookCore in Frameworks */,
 				A8A22E6B2D01D76500C72454 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +91,8 @@
 			packageProductDependencies = (
 				A8A22E682D01D76500C72454 /* GoogleSignIn */,
 				A8A22E6A2D01D76500C72454 /* GoogleSignInSwift */,
+				A8CC4A272D02D788005BED6E /* FacebookCore */,
+				A8CC4A292D02D788005BED6E /* FacebookLogin */,
 			);
 			productName = LearningGoogleSignIn;
 			productReference = A8A22DFC2D01CB2600C72454 /* LearningGoogleSignIn.app */;
@@ -118,6 +124,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A8A22E672D01D76500C72454 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				A8CC4A262D02D788005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A8A22DFD2D01CB2600C72454 /* Products */;
@@ -274,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LearningGoogleSignIn/LearningGoogleSignIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearningGoogleSignIn/Preview Content\"";
@@ -304,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LearningGoogleSignIn/LearningGoogleSignIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearningGoogleSignIn/Preview Content\"";
@@ -361,6 +370,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		A8CC4A262D02D788005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -373,6 +390,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A8A22E672D01D76500C72454 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		A8CC4A272D02D788005BED6E /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8CC4A262D02D788005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		A8CC4A292D02D788005BED6E /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8CC4A262D02D788005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

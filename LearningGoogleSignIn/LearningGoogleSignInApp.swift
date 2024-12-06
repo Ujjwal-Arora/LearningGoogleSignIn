@@ -7,16 +7,36 @@
 
 import SwiftUI
 import GoogleSignIn
+import FBSDKCoreKit
 
 @main
-struct LearningGoogleSignInApp: App {
+struct LearningLogInApp: App {
+    // Attach the AppDelegate
+ //   @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onOpenURL { url in
-                    GIDSignIn.sharedInstance.handle(url)
-                }
-            
+            MainTabView()
         }
     }
 }
+
+//
+//@main
+//struct LearningGoogleSignInApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+////            GoogleSignIn()
+////                .onOpenURL { url in
+////                    GIDSignIn.sharedInstance.handle(url)
+////                }
+//            
+//            FbSignIn()
+//                .onOpenURL { url in
+//                    ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: UIApplication.OpenURLOptionsKey.annotation)
+//                }
+//
+//            
+//        }
+//    }
+//}
